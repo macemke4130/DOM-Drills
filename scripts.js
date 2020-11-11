@@ -21,3 +21,21 @@ function ranColor(){
 }
 
 let colors = ["red", "green", "blue", "yellow", "pink", "black"];
+
+let ul = document.createElement("ul");
+document.body.appendChild(ul);
+
+let myCount = 1;
+
+function addListItem(){
+    let li = document.createElement("li");
+    let liTxt = document.createTextNode("This is list item " + myCount)
+    li.appendChild(liTxt);
+
+    ul.appendChild(li);
+    myCount++;
+}
+
+document.getElementsByClassName("btn")[0].onclick = function(){
+    addListItem();
+};
